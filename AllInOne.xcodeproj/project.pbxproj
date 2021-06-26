@@ -14,6 +14,17 @@
 		2331C61C267F603C002642CF /* AllInOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2331C61A267F603C002642CF /* AllInOne.xcdatamodeld */; };
 		2331C61E267F6040002642CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2331C61D267F6040002642CF /* Assets.xcassets */; };
 		2331C621267F6040002642CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2331C61F267F6040002642CF /* LaunchScreen.storyboard */; };
+		234F24A2267FAE1D005B7723 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F24A1267FAE1D005B7723 /* FirstViewController.swift */; };
+		234F24A4267FB7D1005B7723 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F24A3267FB7D1005B7723 /* SecondViewController.swift */; };
+		234F24A6267FC11D005B7723 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F24A5267FC11D005B7723 /* ThirdViewController.swift */; };
+		234F24A8267FD3DD005B7723 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F24A7267FD3DD005B7723 /* ForthViewController.swift */; };
+		2368C4712683A18B005648D0 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2368C4702683A18B005648D0 /* StudentTableViewCell.swift */; };
+		2368C4752683A1F0005648D0 /* ShowStudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2368C4742683A1F0005648D0 /* ShowStudentsViewController.swift */; };
+		2368C4772683A74D005648D0 /* AddStudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2368C4762683A74D005648D0 /* AddStudentTableViewController.swift */; };
+		2368C4792683BD98005648D0 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2368C4782683BD98005648D0 /* Student.swift */; };
+		23921B932680BCFE0061A7C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23921B922680BCFE0061A7C2 /* CoreData.framework */; };
+		23921B952680BDD70061A7C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23921B942680BDD60061A7C2 /* MapKit.framework */; };
+		23921B972680BE8C0061A7C2 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23921B962680BE8C0061A7C2 /* GeoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,17 @@
 		2331C61D267F6040002642CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2331C620267F6040002642CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2331C622267F6040002642CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234F24A1267FAE1D005B7723 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		234F24A3267FB7D1005B7723 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		234F24A5267FC11D005B7723 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		234F24A7267FD3DD005B7723 /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
+		2368C4702683A18B005648D0 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		2368C4742683A1F0005648D0 /* ShowStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStudentsViewController.swift; sourceTree = "<group>"; };
+		2368C4762683A74D005648D0 /* AddStudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentTableViewController.swift; sourceTree = "<group>"; };
+		2368C4782683BD98005648D0 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		23921B922680BCFE0061A7C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		23921B942680BDD60061A7C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		23921B962680BE8C0061A7C2 /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23921B952680BDD70061A7C2 /* MapKit.framework in Frameworks */,
+				23921B932680BCFE0061A7C2 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +68,7 @@
 			children = (
 				2331C610267F603C002642CF /* AllInOne */,
 				2331C60F267F603C002642CF /* Products */,
+				23921B912680BCFE0061A7C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,12 +87,30 @@
 				2331C613267F603C002642CF /* SceneDelegate.swift */,
 				2331C615267F603C002642CF /* ViewController.swift */,
 				2331C617267F603C002642CF /* Main.storyboard */,
+				2368C4702683A18B005648D0 /* StudentTableViewCell.swift */,
+				2368C4762683A74D005648D0 /* AddStudentTableViewController.swift */,
+				2368C4742683A1F0005648D0 /* ShowStudentsViewController.swift */,
+				2368C4782683BD98005648D0 /* Student.swift */,
+				234F24A1267FAE1D005B7723 /* FirstViewController.swift */,
+				23921B962680BE8C0061A7C2 /* GeoViewController.swift */,
 				2331C61D267F6040002642CF /* Assets.xcassets */,
+				234F24A3267FB7D1005B7723 /* SecondViewController.swift */,
+				234F24A5267FC11D005B7723 /* ThirdViewController.swift */,
+				234F24A7267FD3DD005B7723 /* ForthViewController.swift */,
 				2331C61F267F6040002642CF /* LaunchScreen.storyboard */,
 				2331C622267F6040002642CF /* Info.plist */,
 				2331C61A267F603C002642CF /* AllInOne.xcdatamodeld */,
 			);
 			path = AllInOne;
+			sourceTree = "<group>";
+		};
+		23921B912680BCFE0061A7C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23921B942680BDD60061A7C2 /* MapKit.framework */,
+				23921B922680BCFE0061A7C2 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +184,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234F24A4267FB7D1005B7723 /* SecondViewController.swift in Sources */,
+				2368C4712683A18B005648D0 /* StudentTableViewCell.swift in Sources */,
+				234F24A2267FAE1D005B7723 /* FirstViewController.swift in Sources */,
 				2331C616267F603C002642CF /* ViewController.swift in Sources */,
+				234F24A6267FC11D005B7723 /* ThirdViewController.swift in Sources */,
+				2368C4752683A1F0005648D0 /* ShowStudentsViewController.swift in Sources */,
 				2331C612267F603C002642CF /* AppDelegate.swift in Sources */,
+				2368C4792683BD98005648D0 /* Student.swift in Sources */,
+				23921B972680BE8C0061A7C2 /* GeoViewController.swift in Sources */,
 				2331C614267F603C002642CF /* SceneDelegate.swift in Sources */,
+				2368C4772683A74D005648D0 /* AddStudentTableViewController.swift in Sources */,
+				234F24A8267FD3DD005B7723 /* ForthViewController.swift in Sources */,
 				2331C61C267F603C002642CF /* AllInOne.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
