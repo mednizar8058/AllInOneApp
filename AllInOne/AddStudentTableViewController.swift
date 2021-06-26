@@ -85,7 +85,7 @@ class AddStudentTableViewController: UITableViewController,UIImagePickerControll
     
     @objc func didTapDone(){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-mm-yyyy"
+        dateFormatter.dateFormat = "MM-dd-YYYY"
     
         dateInput.text = "\(dateFormatter.string(from: datePicker.date))"
         self.view.endEditing(true)

@@ -17,7 +17,7 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
     
     
     
-    
+    let datePicker = UIDatePicker()
     
     @IBOutlet weak var showBtn: UITabBarItem!
     
@@ -71,10 +71,10 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
             let edit = UIAlertAction(title: "Update Student", style: .default, handler: {action -> Void in
                 let student = students[indexPath.row]
                 student.fname = alert.textFields![0].text
-                student.lname = alert.textFields![0].text
-                student.age = alert.textFields![0].text
-                student.birthDate = alert.textFields![0].text
-                student.birthCity = alert.textFields![0].text
+                student.lname = alert.textFields![1].text
+                student.age = alert.textFields![2].text
+                student.birthDate = alert.textFields![3].text
+                student.birthCity = alert.textFields![4].text
                 
                 try! context.save()
                 tableView.reloadData()
@@ -88,7 +88,22 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
             alert.addTextField()
             alert.addTextField()
             alert.addTextField()
-            alert.addTextField()
+            alert.addTextField{(textfield : UITextField)->Void in
+                textfield.addTarget(self, action: #selector(self.hello(sender:)), for: .editingDidBegin)
+                
+                textfield.addTarget(self, action: #selector(self.ff(sender:)), for: .editingDidEnd)
+                //toolbar to hold Done button
+                let toolbar = UIToolbar()
+                toolbar.sizeToFit()
+                
+                let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: textfield, action: #selector(textfield.endEditing(_:)))
+                
+                //assign done btn to toolbar
+                toolbar.setItems([doneBtn], animated: true)
+                //assign toolbar
+                textfield.inputAccessoryView = toolbar
+            }
+            
             alert.addTextField()
             
             alert.textFields![0].text = students[indexPath.row].fname
@@ -100,25 +115,60 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
             
             
             
-
-            
-            
-            
+           
             self.present(alert, animated: true)
-            
-            
-            
-
+        
         }
+        
     
-
         update.backgroundColor = .gray
-        
-        
-        
+       
         return [ delete,update]
     }
     
+    @objc func ff(sender:UITextField){
+        let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM-dd-YYYY"
+        
+            sender.text = "\(dateFormatter.string(from: datePicker.date))"
+            self.view.endEditing(true)
+    }
+    
+    @objc func hello(sender:UITextField){
+        
+        datePicker.datePickerMode = .date
+        
+        
+        
+        //assign datepicker
+        sender.inputView = datePicker
+        
+        
+    }
+    /*func create(){
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+            
+            //toolbar to hold Done button
+            let toolbar = UIToolbar()
+            toolbar.sizeToFit();
+            
+            //bar button
+            let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
+            
+            //assign done btn to toolbar
+            toolbar.setItems([doneBtn], animated: true)
+            
+            //assign toolbar
+            alert.textFields![3].inputAccessoryView = toolbar
+            
+            //assign datepicker
+            alert.textFields![3].inputView = datePicker
+    }*/
+        
+        
+        
+       
     
     
     /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
