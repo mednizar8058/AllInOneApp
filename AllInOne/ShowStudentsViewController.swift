@@ -46,6 +46,57 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
         return 156
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            
+            
+            do{
+            let student = students[indexPath.row]
+                context.delete(student)
+                students.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.reloadData()
+                try context.save()
+            }catch{
+                print("error")
+            }
+        }
+        
+
+        let update = UITableViewRowAction(style: .normal, title: "Update") { (action, indexPath) in
+            // update item at indexPath
+            print("updating")
+
+        }
+
+        update.backgroundColor = .gray
+        
+        let archive = UITableViewRowAction(style: .normal, title: "Archive") { (action, indexPath) in
+            print("student put in archive")
+        }
+        
+        archive.backgroundColor = .brown
+        return [ delete,update, archive]
+    }
+    
+    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let student = students[indexPath.row]
+            do{
+                try{
+                    context.delete(student)
+                    context.save()
+                }
+                
+            }catch{
+                print("error")
+            }
+            students.remove(at: indexPath.row)
+            loadData()
+        }
+    }*/
+    
     func loadData(){
         print("loading data")
 
@@ -109,8 +160,10 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
         try! context.execute(deleterequ)*/
         
 
-        
-        loadData()
+        if students.count == 0{
+            loadData()
+        }
+        print(students)
         showBtn.badgeValue = "test"
         
         

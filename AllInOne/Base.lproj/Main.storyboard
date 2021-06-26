@@ -314,9 +314,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t2r-bQ-OMB">
-                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.69273477159999997" green="0.60940977029999999" blue="0.63880204299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="0r5-Zh-JLd">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -382,7 +382,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.86157794932289167" green="0.93774857499165076" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -407,7 +407,6 @@
                         <viewLayoutGuide key="safeArea" id="6Ii-Ch-Dhh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Students List" image="doc.text.magnifyingglass" catalog="system" id="LI8-Ts-cK2"/>
-                    <navigationItem key="navigationItem" id="sxx-Jd-nyr"/>
                     <connections>
                         <outlet property="searchBtn" destination="1NZ-AD-LIA" id="J1S-Nl-LN2"/>
                         <outlet property="searchInput" destination="6Iq-mW-UW9" id="9Si-Me-YCF"/>
@@ -430,6 +429,7 @@
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Avn-9j-0Ea">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <items>
                                 <navigationItem id="bXM-Md-p0U">
                                     <barButtonItem key="leftBarButtonItem" title="Cancel" id="Jjs-Ph-NfL">
@@ -928,8 +928,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Kz-qX-J5a" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y9v-k8-vrS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Y9v-k8-vrS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -941,12 +941,12 @@
             </objects>
             <point key="canvasLocation" x="2316" y="868"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Student Management-->
         <scene sceneID="m0Y-B8-HX0">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="j6j-K6-U23" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="XY6-hC-hFS"/>
+                    <navigationItem key="navigationItem" title="Student Management" id="XY6-hC-hFS"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FT0-19-Mhg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -971,7 +971,7 @@
         <image name="swift" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Iuk-3p-jRL"/>
-        <segue reference="9Lz-dX-ePz"/>
+        <segue reference="zzG-cS-W7F"/>
+        <segue reference="sJt-4H-xZZ"/>
     </inferredMetricsTieBreakers>
 </document>
