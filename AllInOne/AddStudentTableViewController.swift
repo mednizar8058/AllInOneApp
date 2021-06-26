@@ -91,9 +91,9 @@ class AddStudentTableViewController: UITableViewController,UIImagePickerControll
         self.view.endEditing(true)
         
     }
-    let student = Student(context:context)
+    
     @IBAction func createNewStudent(){
-        
+        let student = Student(context:context)
         student.fname = fname.text
         student.lname = lname.text
         student.age = age.text
@@ -102,6 +102,7 @@ class AddStudentTableViewController: UITableViewController,UIImagePickerControll
         student.birthCity = cityInput.text
         
         do{
+            students.append(student)
             try! context.save()
             let alert = UIAlertController(title: "Student Management", message: "Student has been added", preferredStyle: .alert)
             let btn = UIAlertAction(title: "ok", style: .default, handler: nil)

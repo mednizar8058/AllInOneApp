@@ -23,8 +23,7 @@ class StudentTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         cellView.layer.cornerRadius = 30
-        profileImg.layer.cornerRadius = 50
-        fullName.text = "mochir mohammed nizar ggg"
+        profileImg.layer.cornerRadius = 37
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
