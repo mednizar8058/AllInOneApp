@@ -59,26 +59,67 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
                 tableView.reloadData()
                 try context.save()
             }catch{
-                print("error")
+                print("error while deleting student")
             }
         }
         
 
         let update = UITableViewRowAction(style: .normal, title: "Update") { (action, indexPath) in
             // update item at indexPath
-            print("updating")
+            let alert = UIAlertController(title: "Student Management", message: "Updating Student", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let edit = UIAlertAction(title: "Update Student", style: .default, handler: {action -> Void in
+                let student = students[indexPath.row]
+                student.fname = alert.textFields![0].text
+                student.lname = alert.textFields![0].text
+                student.age = alert.textFields![0].text
+                student.birthDate = alert.textFields![0].text
+                student.birthCity = alert.textFields![0].text
+                
+                try! context.save()
+                tableView.reloadData()
+            
+            }
+            )
+            
+            
+            alert.addAction(edit)
+            alert.addAction(cancel)
+            alert.addTextField()
+            alert.addTextField()
+            alert.addTextField()
+            alert.addTextField()
+            alert.addTextField()
+            
+            alert.textFields![0].text = students[indexPath.row].fname
+            alert.textFields![1].text = students[indexPath.row].lname
+            alert.textFields![2].text = students[indexPath.row].age
+            alert.textFields![3].text = students[indexPath.row].birthDate
+            alert.textFields![4].text = students[indexPath.row].birthCity
+            
+            
+            
+            
+
+            
+            
+            
+            self.present(alert, animated: true)
+            
+            
+            
 
         }
+    
 
         update.backgroundColor = .gray
         
-        let archive = UITableViewRowAction(style: .normal, title: "Archive") { (action, indexPath) in
-            print("student put in archive")
-        }
         
-        archive.backgroundColor = .brown
-        return [ delete,update, archive]
+        
+        return [ delete,update]
     }
+    
+    
     
     /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
@@ -163,7 +204,6 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
         if students.count == 0{
             loadData()
         }
-        print(students)
         showBtn.badgeValue = "test"
         
         
