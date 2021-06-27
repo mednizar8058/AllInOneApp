@@ -464,7 +464,7 @@
                                                         <action selector="editProfileImg:" destination="0AV-HO-9v1" eventType="touchUpInside" id="CHd-Bo-qGq"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="swift" translatesAutoresizingMaskIntoConstraints="NO" id="fMN-6I-Qgl">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fMN-6I-Qgl">
                                                     <rect key="frame" x="156" y="11" width="101" height="99"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -966,6 +966,7 @@
         <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
         <image name="doc.text.magnifyingglass" catalog="system" width="58" height="64"/>
         <image name="pause.fill" catalog="system" width="58" height="64"/>
+        <image name="person.circle.fill" catalog="system" width="64" height="60"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="64" height="50"/>
         <image name="play.fill" catalog="system" width="58" height="64"/>
         <image name="swift" width="1200" height="1200"/>
