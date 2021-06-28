@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserDefaultTableViewController: UITableViewController, UIImagePickerControllerDelegate {
+class UserDefaultTableViewController: UITableViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var profileImg: UIImageView!
     
@@ -17,10 +17,12 @@ class UserDefaultTableViewController: UITableViewController, UIImagePickerContro
     @IBOutlet weak var lname: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImg.layer.cornerRadius = 50
 
         
     }
 
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,7 +39,7 @@ class UserDefaultTableViewController: UITableViewController, UIImagePickerContro
     
     @IBAction func editAction(_ sender: UIButton) {
         let controller = UIImagePickerController()
-        controller.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        controller.delegate = self
         controller.sourceType = .photoLibrary
         present(controller, animated: true, completion: nil)
     }

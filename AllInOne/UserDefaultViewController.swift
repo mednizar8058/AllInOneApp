@@ -27,10 +27,8 @@ class UserDefaultViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UserDefaultTableViewCell
         
-        
-        
         cell.fname.text = studentList[indexPath.row].fname
-        cell.fname.text = studentList[indexPath.row].lname
+        cell.lname.text = studentList[indexPath.row].lname
         cell.profileImg.image = UIImage(data: studentList[indexPath.row].profileImg)
         
         return cell

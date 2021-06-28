@@ -45,6 +45,10 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>utiliser</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>utiliser</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
