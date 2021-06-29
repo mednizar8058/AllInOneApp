@@ -25,6 +25,9 @@ class AddStudentTableViewController: UITableViewController,UIImagePickerControll
 
         
     }
+    
+    let dateFormatter = DateFormatter()
+    
 
     // MARK: - Table view data source
 
@@ -84,9 +87,8 @@ class AddStudentTableViewController: UITableViewController,UIImagePickerControll
     
     
     @objc func didTapDone(){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-YYYY"
-    
+        
+    dateFormatter.dateFormat = "yyyy-MM-dd"
         dateInput.text = "\(dateFormatter.string(from: datePicker.date))"
         self.view.endEditing(true)
         
@@ -98,7 +100,9 @@ class AddStudentTableViewController: UITableViewController,UIImagePickerControll
         student.lname = lname.text
         student.age = age.text
         student.profileImg = profileImg.image?.pngData()
-        student.birthDate = dateInput.text
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        student.birthDate = dateFormatter.date(from: dateInput.text!)
         student.birthCity = cityInput.text
         
         do{

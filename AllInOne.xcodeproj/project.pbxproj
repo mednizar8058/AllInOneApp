@@ -27,6 +27,7 @@
 		23921B932680BCFE0061A7C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23921B922680BCFE0061A7C2 /* CoreData.framework */; };
 		23921B952680BDD70061A7C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23921B942680BDD60061A7C2 /* MapKit.framework */; };
 		23921B972680BE8C0061A7C2 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23921B962680BE8C0061A7C2 /* GeoViewController.swift */; };
+		23E619A9268B813C00FCEB80 /* Student.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23E619A7268B813C00FCEB80 /* Student.xcdatamodeld */; };
 		23E91E0E268A2290002BB3FB /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E91E0D268A2290002BB3FB /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		23921B922680BCFE0061A7C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		23921B942680BDD60061A7C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		23921B962680BE8C0061A7C2 /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
+		23E619A8268B813C00FCEB80 /* Student.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Student.xcdatamodel; sourceTree = "<group>"; };
 		23E91E0D268A2290002BB3FB /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				2331C61F267F6040002642CF /* LaunchScreen.storyboard */,
 				2331C622267F6040002642CF /* Info.plist */,
 				2331C61A267F603C002642CF /* AllInOne.xcdatamodeld */,
+				23E619A7268B813C00FCEB80 /* Student.xcdatamodeld */,
 			);
 			path = AllInOne;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				234F24A2267FAE1D005B7723 /* FirstViewController.swift in Sources */,
 				2319969726894D1300A845DB /* UserDefaultTableViewCell.swift in Sources */,
 				2331C616267F603C002642CF /* ViewController.swift in Sources */,
+				23E619A9268B813C00FCEB80 /* Student.xcdatamodeld in Sources */,
 				23E91E0E268A2290002BB3FB /* WeatherViewController.swift in Sources */,
 				234F24A6267FC11D005B7723 /* ThirdViewController.swift in Sources */,
 				2368C4752683A1F0005648D0 /* ShowStudentsViewController.swift in Sources */,
@@ -415,6 +419,16 @@
 			);
 			currentVersion = 2331C61B267F603C002642CF /* AllInOne.xcdatamodel */;
 			path = AllInOne.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		23E619A7268B813C00FCEB80 /* Student.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				23E619A8268B813C00FCEB80 /* Student.xcdatamodel */,
+			);
+			currentVersion = 23E619A8268B813C00FCEB80 /* Student.xcdatamodel */;
+			path = Student.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

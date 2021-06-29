@@ -16,7 +16,7 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
     
     
     
-    
+    let dateFormatter = DateFormatter()
     let datePicker = UIDatePicker()
     
     @IBOutlet weak var showBtn: UITabBarItem!
@@ -35,7 +35,10 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! StudentTableViewCell
         cell.fullName.text = "\(students[indexPath.row].fname!) \(students[indexPath.row].lname!)"
         cell.age.text = "\(students[indexPath.row].age!)"
-        cell.birthDate.text = "\(students[indexPath.row].birthDate!)"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        cell.birthDate.text = dateFormatter.string(from: students[indexPath.row].birthDate!)
+        
         cell.birthPlace.text = "\(students[indexPath.row].birthCity!)"
         cell.profileImg.image = UIImage(data: students[indexPath.row].profileImg! as Data)
         
@@ -73,7 +76,7 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
                 student.fname = alert.textFields![0].text
                 student.lname = alert.textFields![1].text
                 student.age = alert.textFields![2].text
-                student.birthDate = alert.textFields![3].text
+                student.birthDate = self.dateFormatter.date(from: alert.textFields![3].text! )
                 student.birthCity = alert.textFields![4].text
                 
                 try! context.save()
@@ -109,7 +112,7 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
             alert.textFields![0].text = students[indexPath.row].fname
             alert.textFields![1].text = students[indexPath.row].lname
             alert.textFields![2].text = students[indexPath.row].age
-            alert.textFields![3].text = students[indexPath.row].birthDate
+            alert.textFields![3].text = self.dateFormatter.string(from: students[indexPath.row].birthDate!)
             alert.textFields![4].text = students[indexPath.row].birthCity
             
             
