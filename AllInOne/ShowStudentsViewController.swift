@@ -76,6 +76,8 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
                 student.fname = alert.textFields![0].text
                 student.lname = alert.textFields![1].text
                 student.age = alert.textFields![2].text
+                self.dateFormatter.dateFormat = "yyyy-MM-dd"
+                
                 student.birthDate = self.dateFormatter.date(from: alert.textFields![3].text! )
                 student.birthCity = alert.textFields![4].text
                 
@@ -92,9 +94,9 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
             alert.addTextField()
             alert.addTextField()
             alert.addTextField{(textfield : UITextField)->Void in
-                textfield.addTarget(self, action: #selector(self.hello(sender:)), for: .editingDidBegin)
+                textfield.addTarget(self, action: #selector(self.justDateMode(sender:)), for: .editingDidBegin)
                 
-                textfield.addTarget(self, action: #selector(self.ff(sender:)), for: .editingDidEnd)
+                textfield.addTarget(self, action: #selector(self.getDateFromDatePicker(sender:)), for: .editingDidEnd)
                 //toolbar to hold Done button
                 let toolbar = UIToolbar()
                 toolbar.sizeToFit()
@@ -112,6 +114,7 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
             alert.textFields![0].text = students[indexPath.row].fname
             alert.textFields![1].text = students[indexPath.row].lname
             alert.textFields![2].text = students[indexPath.row].age
+            self.dateFormatter.dateFormat = "yyyy-MM-dd"
             alert.textFields![3].text = self.dateFormatter.string(from: students[indexPath.row].birthDate!)
             alert.textFields![4].text = students[indexPath.row].birthCity
             
@@ -129,15 +132,15 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
         return [ delete,update]
     }
     
-    @objc func ff(sender:UITextField){
+    @objc func getDateFromDatePicker(sender:UITextField){
         let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM-dd-YYYY"
+            dateFormatter.dateFormat = "yyyy-MM-dd"
         
             sender.text = "\(dateFormatter.string(from: datePicker.date))"
             self.view.endEditing(true)
     }
     
-    @objc func hello(sender:UITextField){
+    @objc func justDateMode(sender:UITextField){
         
         datePicker.datePickerMode = .date
         

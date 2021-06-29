@@ -14,7 +14,6 @@
 		2331C614267F603C002642CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2331C613267F603C002642CF /* SceneDelegate.swift */; };
 		2331C616267F603C002642CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2331C615267F603C002642CF /* ViewController.swift */; };
 		2331C619267F603C002642CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2331C617267F603C002642CF /* Main.storyboard */; };
-		2331C61C267F603C002642CF /* AllInOne.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2331C61A267F603C002642CF /* AllInOne.xcdatamodeld */; };
 		2331C61E267F6040002642CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2331C61D267F6040002642CF /* Assets.xcassets */; };
 		2331C621267F6040002642CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2331C61F267F6040002642CF /* LaunchScreen.storyboard */; };
 		234F24A2267FAE1D005B7723 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F24A1267FAE1D005B7723 /* FirstViewController.swift */; };
@@ -40,7 +39,6 @@
 		2331C613267F603C002642CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2331C615267F603C002642CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2331C618267F603C002642CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2331C61B267F603C002642CF /* AllInOne.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AllInOne.xcdatamodel; sourceTree = "<group>"; };
 		2331C61D267F6040002642CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2331C620267F6040002642CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2331C622267F6040002642CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				234F24A7267FD3DD005B7723 /* ForthViewController.swift */,
 				2331C61F267F6040002642CF /* LaunchScreen.storyboard */,
 				2331C622267F6040002642CF /* Info.plist */,
-				2331C61A267F603C002642CF /* AllInOne.xcdatamodeld */,
 				23E619A7268B813C00FCEB80 /* Student.xcdatamodeld */,
 			);
 			path = AllInOne;
@@ -214,7 +211,6 @@
 				2368C4772683A74D005648D0 /* AddStudentTableViewController.swift in Sources */,
 				2319969526894C4500A845DB /* UserDefaultViewController.swift in Sources */,
 				234F24A8267FD3DD005B7723 /* ForthViewController.swift in Sources */,
-				2331C61C267F603C002642CF /* AllInOne.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,16 +408,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2331C61A267F603C002642CF /* AllInOne.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2331C61B267F603C002642CF /* AllInOne.xcdatamodel */,
-			);
-			currentVersion = 2331C61B267F603C002642CF /* AllInOne.xcdatamodel */;
-			path = AllInOne.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		23E619A7268B813C00FCEB80 /* Student.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
