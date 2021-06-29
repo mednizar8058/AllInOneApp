@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var Sixth: UIButton!
     
     @IBOutlet weak var Seventh: UIButton!
+    
+    @IBOutlet weak var eighth: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareMenu()
@@ -46,10 +48,11 @@ class ViewController: UIViewController {
         Fifth.layer.cornerRadius = 20
         Sixth.layer.cornerRadius = 20
         Seventh.layer.cornerRadius = 20
+        eighth.layer.cornerRadius = 20
         
         StudentManView.layer.cornerRadius = 20
         headerView.layer.cornerRadius = 30
-        profileImg.layer.cornerRadius = 50
+        profileImg.layer.cornerRadius = 37
         
     }
 

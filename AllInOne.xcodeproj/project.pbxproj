@@ -27,6 +27,7 @@
 		23921B932680BCFE0061A7C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23921B922680BCFE0061A7C2 /* CoreData.framework */; };
 		23921B952680BDD70061A7C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23921B942680BDD60061A7C2 /* MapKit.framework */; };
 		23921B972680BE8C0061A7C2 /* GeoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23921B962680BE8C0061A7C2 /* GeoViewController.swift */; };
+		23E91E0E268A2290002BB3FB /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E91E0D268A2290002BB3FB /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,9 +50,11 @@
 		2368C4702683A18B005648D0 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		2368C4742683A1F0005648D0 /* ShowStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStudentsViewController.swift; sourceTree = "<group>"; };
 		2368C4762683A74D005648D0 /* AddStudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentTableViewController.swift; sourceTree = "<group>"; };
+		238ECCED268B465B002A19BA /* waypoint.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = waypoint.gpx; path = ../../../Downloads/waypoint.gpx; sourceTree = "<group>"; };
 		23921B922680BCFE0061A7C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		23921B942680BDD60061A7C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		23921B962680BE8C0061A7C2 /* GeoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoViewController.swift; sourceTree = "<group>"; };
+		23E91E0D268A2290002BB3FB /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		2331C605267F603C002642CF = {
 			isa = PBXGroup;
 			children = (
+				238ECCED268B465B002A19BA /* waypoint.gpx */,
 				2331C610267F603C002642CF /* AllInOne */,
 				2331C60F267F603C002642CF /* Products */,
 				23921B912680BCFE0061A7C2 /* Frameworks */,
@@ -91,6 +95,7 @@
 				2331C613267F603C002642CF /* SceneDelegate.swift */,
 				2331C615267F603C002642CF /* ViewController.swift */,
 				2331C617267F603C002642CF /* Main.storyboard */,
+				23E91E0D268A2290002BB3FB /* WeatherViewController.swift */,
 				2319969426894C4500A845DB /* UserDefaultViewController.swift */,
 				2319969626894D1300A845DB /* UserDefaultTableViewCell.swift */,
 				231996922689475800A845DB /* UserDefaultTableViewController.swift */,
@@ -195,6 +200,7 @@
 				234F24A2267FAE1D005B7723 /* FirstViewController.swift in Sources */,
 				2319969726894D1300A845DB /* UserDefaultTableViewCell.swift in Sources */,
 				2331C616267F603C002642CF /* ViewController.swift in Sources */,
+				23E91E0E268A2290002BB3FB /* WeatherViewController.swift in Sources */,
 				234F24A6267FC11D005B7723 /* ThirdViewController.swift in Sources */,
 				2368C4752683A1F0005648D0 /* ShowStudentsViewController.swift in Sources */,
 				2331C612267F603C002642CF /* AppDelegate.swift in Sources */,

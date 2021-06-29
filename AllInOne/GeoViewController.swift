@@ -38,10 +38,8 @@ class GeoViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDe
         
         //gesture
         let press = UILongPressGestureRecognizer(target: self, action: #selector(action(gesture:)))
-        press.minimumPressDuration = 1.0
+        press.minimumPressDuration = 0.5
         mkMapView.addGestureRecognizer(press)
-        
-        
         
         mkMapView.layer.cornerRadius = 20
         dataView.layer.cornerRadius = 30
@@ -67,6 +65,8 @@ class GeoViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDe
         mkMapView.addAnnotation(anno)
         
         
+        
+        
     }
     
     
@@ -80,16 +80,13 @@ class GeoViewController: UIViewController, MKMapViewDelegate,CLLocationManagerDe
         altitude.text = String(format:"%.4f", latestLocation.altitude)
         
         let span:MKCoordinateSpan = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        
-        
-        
-        let loc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(33.030980, -7.616516)
+        let loc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(32.992424 ,-7.622266 )
         let region:MKCoordinateRegion = MKCoordinateRegion.init(center: loc, span: span)
         
         CLGeocoder().reverseGeocodeLocation(latestLocation){
             (mar,err) in
             if let place = mar?[0]{
-                self.label.text = place.addressDictionary?.description
+                self.label.text = "\(place.thoroughfare!),\(place.subLocality!),\(place.subAdministrativeArea!),\(place.postalCode!),\(place.country!)"
             }
         }
         
