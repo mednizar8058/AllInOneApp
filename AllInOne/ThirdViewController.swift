@@ -18,10 +18,17 @@ class ThirdViewController: UIViewController {
     
     @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var contrainte: NSLayoutConstraint!
+    
+    @IBOutlet weak var visualiseBtn: UIButton!
+    @IBOutlet weak var clearBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         textArea.layer.borderWidth = 1
+        visualiseBtn.layer.cornerRadius = 7
+        clearBtn.layer.cornerRadius = 7
+        
 
         // Do any additional setup after loading the view.
     }
@@ -36,6 +43,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func clear(_ sender: Any) {
         textArea.text = ""
+        visualiseArea.text = ""
     }
     
     @IBAction func visualiseAction(_ sender: Any) {

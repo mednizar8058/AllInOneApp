@@ -28,6 +28,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var grndLevel: UILabel!
     
     @IBOutlet weak var myview: UIView!
+    
     @IBAction func search(_ sender: UIButton) {
         getThingsDone()
     }
@@ -157,12 +158,20 @@ class WeatherViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.green
+        
+        
         myview.layer.cornerRadius = 40
         myview.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         citySearch.barTintColor = UIColor.clear
         citySearch.backgroundColor = UIColor.clear
         citySearch.isTranslucent = true
         citySearch.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        
+        let gradiantLayer = CAGradientLayer()
+        gradiantLayer.frame = view.bounds
+        gradiantLayer.colors = [UIColor.systemBlue.cgColor,UIColor.white.cgColor]
+        view.subviews[0].layer.insertSublayer(gradiantLayer, at: 0)
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {

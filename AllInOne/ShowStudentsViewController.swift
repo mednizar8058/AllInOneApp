@@ -151,55 +151,13 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
         
         
     }
-    /*func create(){
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .date
-            
-            //toolbar to hold Done button
-            let toolbar = UIToolbar()
-            toolbar.sizeToFit();
-            
-            //bar button
-            let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
-            
-            //assign done btn to toolbar
-            toolbar.setItems([doneBtn], animated: true)
-            
-            //assign toolbar
-            alert.textFields![3].inputAccessoryView = toolbar
-            
-            //assign datepicker
-            alert.textFields![3].inputView = datePicker
-    }*/
-        
-        
-        
-       
-    
-    
-    /*func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            let student = students[indexPath.row]
-            do{
-                try{
-                    context.delete(student)
-                    context.save()
-                }
-                
-            }catch{
-                print("error")
-            }
-            students.remove(at: indexPath.row)
-            loadData()
-        }
-    }*/
     
     func loadData(){
         print("loading data")
 
         let request:NSFetchRequest<Student> = Student.fetchRequest()
         
-        //request.predicate = NSPredicate(format: "lname = %@", "test")
+        
         do{
             let result = try! context.fetch(request)
             
@@ -223,27 +181,33 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     @IBAction func searchAction(_ sender: Any) {
-        let request = NSFetchRequest<Student>(entityName: "Student")
-        
-        request.predicate = NSPredicate(format: "lname = %@", searchInput.text!)
-        do{
-            let result = try! context.fetch(request)
-            if !result.isEmpty{
-                let alert = UIAlertController(title: "Student Management", message: "Student exists", preferredStyle: .alert)
-                let btn = UIAlertAction(title: "ok", style: .default, handler: nil)
-                alert.addAction(btn)
-                present(alert, animated: true)
-            }
-            
-            else{
-               let alert = UIAlertController(title: "Student Management", message: "Student doesn't exists", preferredStyle: .alert)
-                let btn = UIAlertAction(title: "ok", style: .default, handler: nil)
-                alert.addAction(btn)
-                present(alert, animated: true)
-            }
-            
-            
+        if(searchInput.text == "") {
+            return
         }
+        else{
+            let request = NSFetchRequest<Student>(entityName: "Student")
+            
+            request.predicate = NSPredicate(format: "lname = %@", searchInput.text!)
+            do{
+                let result = try! context.fetch(request)
+                if !result.isEmpty{
+                    let alert = UIAlertController(title: "Student Management", message: "Student exists", preferredStyle: .alert)
+                    let btn = UIAlertAction(title: "ok", style: .default, handler: nil)
+                    alert.addAction(btn)
+                    present(alert, animated: true)
+                }
+                
+                else{
+                   let alert = UIAlertController(title: "Student Management", message: "Student doesn't exists", preferredStyle: .alert)
+                    let btn = UIAlertAction(title: "ok", style: .default, handler: nil)
+                    alert.addAction(btn)
+                    present(alert, animated: true)
+                }
+                
+                
+            }
+        }
+        
         
     }
     
@@ -251,16 +215,17 @@ class ShowStudentsViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
-        let deleterequ = NSBatchDeleteRequest(fetchRequest: request)
         
-        try! context.execute(deleterequ)*/
         
-
+        searchInput.barTintColor = UIColor.clear
+        searchInput.backgroundColor = UIColor.clear
+        searchInput.isTranslucent = true
+        searchInput.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        
         if students.count == 0{
             loadData()
         }
-        showBtn.badgeValue = "test"
+        
         
         
         

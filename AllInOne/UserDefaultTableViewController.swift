@@ -50,12 +50,21 @@ class UserDefaultTableViewController: UITableViewController, UIImagePickerContro
         studentList.append(student(fname: fname.text!, lname: lname.text!, profileImg: (profileImg.image!.pngData())!))
           
           UserDefaults.standard.set(try? PropertyListEncoder().encode(studentList), forKey: "students")
+        fname.text = ""
+        lname.text = ""
+        profileImg.image = UIImage(systemName: "person.circle")
+        let alert = UIAlertController(title: "Student Management UD", message: "Student has been added", preferredStyle: .alert)
+        
+        
+        let action = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert,animated: true)
     }
     
     @IBAction func cancelAction(_ sender: Any) {
         fname.text = ""
         lname.text = ""
-        profileImg.image = UIImage(systemName: "person.circle.fill")
+        profileImg.image = UIImage(systemName: "person.circle")
     }
     
     

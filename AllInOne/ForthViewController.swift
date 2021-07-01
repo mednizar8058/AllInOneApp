@@ -37,6 +37,8 @@ class ForthViewController: UIViewController {
         
         func calculate() -> (String,UIColor){
             switch value {
+            case 0..<18.5:
+                return("Maigreur",UIColor(red: 0.7137, green: 0.8392, blue: 0, alpha: 1.0))
             case 18.5..<25:
                 return("Poids normale",.green)
             case 25..<30:
@@ -62,6 +64,10 @@ class ForthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let gradiantLayer = CAGradientLayer()
+        gradiantLayer.frame = view.bounds
+        gradiantLayer.colors = [UIColor.systemGreen.cgColor,UIColor.white.cgColor]
+        view.layer.insertSublayer(gradiantLayer, at: 0)
         calculateBtb.layer.cornerRadius = 10
     }
     
@@ -102,15 +108,12 @@ class ForthViewController: UIViewController {
         
         
         }
-    var str = "testing"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destinationController = segue.destination as! ResultViewController
         destinationController.imc = calculate()
-            
     }
-            
-        
+       
 }
     
         

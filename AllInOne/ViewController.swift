@@ -41,6 +41,11 @@ class ViewController: UIViewController {
     }
     
     func prepareMenu(){
+        let gradiantLayer = CAGradientLayer()
+        gradiantLayer.frame = view.bounds
+        gradiantLayer.colors = [UIColor.systemBlue.cgColor,UIColor.white.cgColor]
+        view.layer.insertSublayer(gradiantLayer, at: 0)
+        
         First.layer.cornerRadius = 20
         Second.layer.cornerRadius = 20
         Third.layer.cornerRadius = 20
